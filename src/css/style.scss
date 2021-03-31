@@ -73,7 +73,7 @@ h6 {
     font-size: inherit;
     font-weight: inherit;
 }
-
+@import url(https://fonts.googleapis.com/css?family=Raleway:300);
 /*--------------------*/
 
 /*Header*/
@@ -111,20 +111,28 @@ header {
 }
 
 .blue-button {
-    font-size: 14px;
-    padding: 10px;
-    background-color: rgb(37, 0, 249);
-    color: #fff;
-    border-radius: 30px;
-    font-weight: 700;
-    width: 120px;
-    &:hover {
-        color: orange;
+    position: relative;
+    background: rgb(37, 0, 249);
+    color: #ccc;
+    width: 119px;
+    height: 44px;
+    border: 0;
+    font-size: 16px;
+    border-radius: 26px;
+    padding-top: 8px;
+    -webkit-transition: .6s;
+    transition: .6s;
+    overflow: hidden;
+    &:focus{
+      outline: 0;
     }
-    &:focus {
-        box-shadow: none;
+    
+    &:hover{
+      background: orange;
+      cursor: pointer;
+     
     }
-}
+  }
 
 .nav-fill {
     display: flex;
@@ -466,6 +474,8 @@ footer {
     margin-top: 70px;
 }
 /*--------------------*/
+
+/*Animations*/
 @keyframes fadeInUp {
     from {
         transform: translate3d(0, 40px, 0);
@@ -508,3 +518,11 @@ footer {
 .global-content {
     background-color: #fff;
 }
+
+/*--------------------*/
+
+/*Modal*/
+
+/*--------------------*/
+
+

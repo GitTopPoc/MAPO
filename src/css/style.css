@@ -1,4 +1,5 @@
 /*NULLSTYLE*/
+@import url(https://fonts.googleapis.com/css?family=Raleway:300);
 * {
   padding: 0;
   margin: 0;
@@ -129,22 +130,27 @@ header ul li a:hover {
 }
 
 .blue-button {
-  font-size: 14px;
-  padding: 10px;
-  background-color: #2500f9;
-  color: #fff;
-  border-radius: 30px;
-  font-weight: 700;
-  width: 120px;
-}
-
-.blue-button:hover {
-  color: orange;
+  position: relative;
+  background: #2500f9;
+  color: #ccc;
+  width: 119px;
+  height: 44px;
+  border: 0;
+  font-size: 16px;
+  border-radius: 26px;
+  padding-top: 8px;
+  -webkit-transition: .6s;
+  transition: .6s;
+  overflow: hidden;
 }
 
 .blue-button:focus {
-  -webkit-box-shadow: none;
-          box-shadow: none;
+  outline: 0;
+}
+
+.blue-button:hover {
+  background: orange;
+  cursor: pointer;
 }
 
 .nav-fill {
@@ -505,6 +511,7 @@ footer ul {
 }
 
 /*--------------------*/
+/*Animations*/
 @keyframes fadeInUp {
   from {
     -webkit-transform: translate3d(0, 40px, 0);
@@ -549,4 +556,8 @@ footer ul {
 .global-content {
   background-color: #fff;
 }
+
+/*--------------------*/
+/*Modal*/
+/*--------------------*/
 /*# sourceMappingURL=style.css.map */
