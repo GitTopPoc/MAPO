@@ -1,0 +1,152 @@
+/*Order heading*/
+.order-heading {
+    margin: 0 auto;
+    text-align: center;
+    padding: 40px 0 60px 0;
+}
+
+.contacts {
+    flex-wrap: wrap;
+    display: flex;
+    padding-top: 60px;
+   
+}
+
+.heading {
+    padding: 40px 0 60px 0;
+    background-color: #fff;
+    margin-bottom: 401px;
+
+}
+
+.contact-block {
+    background-color: #fff;
+    box-shadow: 0 0 5px #00000080;
+    margin: 10px;
+}
+
+.contact-block-top {
+    
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 120px;
+    width: 100%;
+    padding-top: 40px;
+    font-size: 50px;
+    color: #fff;
+}
+
+.contact-block-top-email {
+    background-image: url(../image/CONTACT-1.png);
+}
+
+.contact-block-top-phone {
+    background-image: url(../image/CONTACT-2.png);
+}
+
+.contact-block-top-adress {
+    background-image: url(../image/CONTACT-3.png);
+}
+/*--------------------*/
+
+/*Order info*/
+.order-info {
+    background-color: rgb(223, 231, 245);
+    margin: 0 auto;
+    padding-left: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px #00000080;
+    text-align: center;
+}
+
+.order-info-important {
+    color: red;
+}
+
+.order-info-paragraph {
+  
+    margin: 0 auto;
+    text-align: left !important;
+}
+/*--------------------*/
+
+/*Order info*/
+.order-form {
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 30px;
+    box-shadow: 0 0 5px #00000080;
+    margin-top: 60px;
+}
+.form {
+    padding: 20px 0 30px 0;
+}
+
+.small-form-fields {
+    
+    margin: 0 auto;
+    padding: 14px 0;
+}
+.input-field {
+    border: solid 2px gray;
+    padding-left: 10px;
+    font-size: 20px;
+    line-height: 26px;
+}
+
+.textarea {
+    border: solid 2px gray;
+    padding: 10px;
+    width: 100%;
+    max-width: 870px;
+    font-size: 20px;
+    line-height: 26px;
+    height: 300px;
+    resize: none;
+}
+
+.form-button {
+    color: #fff !important;
+    margin-top: 20px;
+    background-color: rgb(25, 189, 154);
+    transition: .3s;
+    width: 100%;
+    max-width: 400px;
+    font-size: 30px;
+    padding: 10px;
+    &:hover {
+        background-color: rgb(73, 240, 204);
+    }
+}
+.home-button {
+    margin: 0 auto;
+}
+.success-sended {
+    margin: 0 auto;
+    text-align: center;
+    box-shadow: 0 0 5px #00000080;
+    padding-bottom: 30px;
+
+} 
+
+
+.success-settings {
+    margin-bottom: 401px;
+    background-color: #fff;
+    padding: 50px 0;
+}
+
+.go-main {
+    padding: 10px 20px 14px 20px;
+    font-size: 30px;
+    border-radius: 40px;
+    background-color: rgb(37, 0, 249);
+    color: #fff;
+    transition: .3s;
+    &:hover {
+        color: #fff;
+        background: orange;
+    }
+}
+/*--------------------*/

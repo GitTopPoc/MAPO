@@ -1,0 +1,145 @@
+.about-choose {
+  position: relative;
+  z-index: 100;
+  max-width: 100%;
+  background-color: #fff;
+  margin-bottom: 401px;
+}
+
+.about-team-section {
+  text-align: center;
+  background-color: #fff;
+  padding: 40px 0px 60px 0;
+}
+
+.block-shadow {
+  -webkit-box-shadow: 0 2rem 2rem #00000080;
+          box-shadow: 0 2rem 2rem #00000080;
+}
+
+/*Team section*/
+.team {
+  margin: 0;
+  padding-top: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.teammate {
+  margin: 30px auto;
+  width: 100%;
+  max-width: 290px;
+  padding: 4px 4px 10px 4px;
+  -webkit-box-shadow: 0 0 5px #00000080;
+          box-shadow: 0 0 5px #00000080;
+}
+
+.team-links {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+  padding-top: 130px;
+  width: 100%;
+  height: 100%;
+}
+
+.team-links-social {
+  text-decoration: none;
+  color: #fff;
+  font-size: 50px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.team-links-social:hover {
+  color: orange;
+}
+
+.team-img {
+  position: relative;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.team-img:hover .team-links {
+  display: block;
+  background-color: rgba(36, 47, 81, 0.4);
+  -webkit-animation: fadein 0.3s;
+          animation: fadein 0.3s;
+}
+
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.team-name {
+  padding-top: 12px;
+}
+
+.team-name-text {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.mate-1 {
+  border-bottom: solid 4px #242f51;
+}
+
+.mate-text-1 {
+  color: #242f51;
+}
+
+.mate-2 {
+  border-bottom: solid 4px #38c695;
+}
+
+.mate-text-2 {
+  color: #38c695;
+}
+
+.mate-3 {
+  border-bottom: solid 4px #dd7d00;
+}
+
+.mate-text-3 {
+  color: #dd7d00;
+}
+
+.mate-4 {
+  border-bottom: solid 4px #008fb3;
+}
+
+.mate-text-4 {
+  color: #008fb3;
+}
+
+.mate-5 {
+  border-bottom: solid 4px #d80303;
+}
+
+.mate-text-5 {
+  color: #d80303;
+}
+
+/*--------------------*/
+/*# sourceMappingURL=about.css.map */

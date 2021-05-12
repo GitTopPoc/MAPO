@@ -1,0 +1,203 @@
+/*Admin-auth*/
+.admin-section {
+  margin-bottom: 401px;
+  background-color: #fff;
+  padding: 30px 0;
+}
+
+.form-inputs {
+  margin: 0 auto;
+  -webkit-box-shadow: 0 0 5px #00000080;
+          box-shadow: 0 0 5px #00000080;
+  padding: 10px 0 20px 0;
+}
+
+.orders-field {
+  -webkit-box-shadow: 0 0 5px #00000080;
+          box-shadow: 0 0 5px #00000080;
+  padding: 2px 0;
+}
+
+.auth-admin {
+  border: solid 2px gray;
+  padding-left: 4px;
+  margin: 10px auto;
+}
+
+.admin-auth-button {
+  font-size: 16px;
+  border: 2px solid gray;
+  padding: 4px 8px;
+  color: #fff;
+  background: #2500f9;
+  margin: 0 0 0 50px;
+  border-radius: 4px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.admin-auth-button:hover {
+  background: #5e42fd;
+}
+
+.admin-auth-text {
+  text-align: center;
+  color: red;
+}
+
+.input-fields {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 170px;
+}
+
+.admin-logout {
+  color: #fff;
+  background-color: red;
+  padding: 4px 8px;
+  border-radius: 2px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  font-size: 16px;
+  margin: 0 0 0 14px;
+}
+
+.admin-logout:hover {
+  background: #fa6b6b;
+}
+
+.logout-panel {
+  max-width: 200px;
+  width: 100%;
+  font-size: 16px;
+  -webkit-box-shadow: 0 0 5px #00000080;
+          box-shadow: 0 0 5px #00000080;
+  padding: 14px;
+}
+
+/*--------------------*/
+/*Orders*/
+.filter-button {
+  padding: 4px 10px 0px 10px;
+  border-bottom: 2px solid #2500f9;
+  margin-right: 10px;
+}
+
+.order-filters {
+  margin: 40px auto;
+  -webkit-box-shadow: 0 0 5px #00000080;
+          box-shadow: 0 0 5px #00000080;
+  padding: 20px;
+}
+
+.order {
+  margin: 20px auto;
+  -webkit-box-shadow: 0 0 5px #00000080;
+          box-shadow: 0 0 5px #00000080;
+  padding: 20px 10px;
+}
+
+.editing {
+  margin: 0 auto;
+}
+
+.editing-form {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.editing-heading {
+  text-align: center;
+  margin: 0 !important;
+}
+
+.order-edit-button {
+  margin: 10px 0;
+  padding: 4px 6px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  color: #fff;
+  font-size: 16px;
+}
+
+.order-move-button {
+  background-color: #2500f9;
+}
+
+.order-move-button:hover {
+  background-color: orange;
+}
+
+.order-move-new-button {
+  background-color: green;
+}
+
+.order-move-new-button:hover {
+  background-color: lime;
+}
+
+.order-move-processing-button {
+  background-color: orange;
+}
+
+.order-move-processing-button:hover {
+  background-color: #ffd079;
+}
+
+.order-delete-button {
+  background-color: red;
+}
+
+.order-delete-button:hover {
+  background-color: #ff5d5d;
+}
+
+.order-heading {
+  margin: 0 0 20px 0;
+}
+
+.order-description,
+.order-heading {
+  padding: 10px;
+  -webkit-box-shadow: 0 0 5px #00000080;
+          box-shadow: 0 0 5px #00000080;
+}
+
+.order-status {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.order-time {
+  text-align: right;
+  margin: 18px 0 0 0;
+}
+
+.order-status-text {
+  font-size: 24px;
+  font-weight: 700;
+  color: #fff;
+  border-radius: 6px;
+  padding: 8px 16px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.order-status-text-new {
+  background-color: green;
+}
+
+.order-status-text-processing {
+  background-color: orange;
+}
+
+.order-status-text-done {
+  background-color: red;
+}
+
+/*--------------------*/
+/*# sourceMappingURL=admin.css.map */

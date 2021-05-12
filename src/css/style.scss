@@ -74,6 +74,10 @@ h6 {
     font-weight: inherit;
 }
 @import url(https://fonts.googleapis.com/css?family=Raleway:300);
+
+.applab-logo-text {
+    opacity: 0;
+}
 /*--------------------*/
 
 /*Header*/
@@ -84,16 +88,18 @@ h6 {
 }
 
 header {
+    z-index: 100;
     padding-top: 90px;
-
+    position: relative;
+    background-color: #fff;
     ul li {
         text-align: left;
     }
-    ul li:nth-child(3) {
-        margin-left: 14px;
+    ul li:nth-child(2) {
+        margin-left: 20px;
     }
     ul li:last-child {
-        margin-left: -30px;
+        margin-left: -8px;
     }
     ul li a {
         font-weight: 500;
@@ -136,9 +142,11 @@ header {
 
 .nav-fill {
     display: flex;
-    justify-content: space-between;
+    justify-content: left;
 }
-
+.btn-last {
+   padding-left: 170px;
+}
 /*--------------------*/
 
 /*Text Styles*/
@@ -254,6 +262,7 @@ h3 {
 
 .jackpot {
     margin: 80px 0 120px 0;
+    background-color: #fff;
 }
 .feature-blocks {
     h3 {
@@ -305,8 +314,11 @@ h3 {
     background-size: contain;
     margin: 60px 0 100px 0;
     z-index: -10;
+    
 }
-
+.customer-photo {
+    border-radius: 50%;
+}
 .carousel-item {
     z-index: 1;
 }
@@ -432,7 +444,7 @@ h3 {
 
 /*Footer*/
 .img-center {
-    margin-left: 38px;
+    margin: 0 0 0 18px;
 }
 
 
@@ -521,8 +533,5 @@ footer {
 
 /*--------------------*/
 
-/*Modal*/
-
-/*--------------------*/
 
 

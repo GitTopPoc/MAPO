@@ -18,4 +18,8 @@ $(document).ready(function() {
             $(this).parent().parent().find('.q-btn').toggle()
         }
     })
+
+    
 });
+
+
