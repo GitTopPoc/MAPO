@@ -79,8 +79,32 @@
 /*Orders*/
 .filter-button {
   padding: 4px 10px 0px 10px;
-  border-bottom: 2px solid #2500f9;
+  border: 2px solid #2500f9;
   margin-right: 10px;
+  border-radius: 26px;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.filter-button:active, .filter-button:focus {
+  outline: none;
+}
+
+.filter-button:hover {
+  background-color: orange;
+}
+
+.filter-button:hover p {
+  color: #fff;
+}
+
+.filter-button-active {
+  outline: none;
+  background-color: #2500f9;
+}
+
+.filter-button-active p {
+  color: #fff;
 }
 
 .order-filters {
@@ -98,7 +122,7 @@
 }
 
 .editing {
-  margin: 0 auto;
+  margin: 10px auto;
 }
 
 .editing-form {
@@ -197,6 +221,132 @@
 
 .order-status-text-done {
   background-color: red;
+}
+
+/*--------------------*/
+/*progress bar*/
+.box {
+  background: #fff;
+  padding: 6px;
+  width: 300px;
+  height: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
+          box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
+  -webkit-transition: -webkit-transform .2s;
+  transition: -webkit-transform .2s;
+  transition: transform .2s;
+  transition: transform .2s, -webkit-transform .2s;
+  margin: 10px auto 34px;
+}
+
+/* .box:hover
+{
+ transform:scale(1.2);
+} */
+.box .percent {
+  width: 150px;
+  height: 150px;
+  position: relative;
+}
+
+.box .percent svg {
+  width: 150px;
+  height: 150px;
+  position: relative;
+}
+
+.box .percent svg circle {
+  width: 150px;
+  height: 150px;
+  fill: none;
+  stroke-width: 10;
+  stroke: #000;
+  -webkit-transform: translate(5px, 5px);
+          transform: translate(5px, 5px);
+  stroke-linecap: round;
+}
+
+.percent-done {
+  stroke-dasharray: 500;
+  stroke-dashoffset: 500;
+}
+
+.box .percent svg circle:nth-child(1) {
+  stroke-dashoffset: 0;
+  stroke: #f3f3f3;
+}
+
+.box .percent svg circle:nth-child(2) {
+  stroke-dashoffset: calc(440 - (440 * 87) / 100);
+  stroke: #03a9f4;
+}
+
+.box .percent .num {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  color: #111;
+}
+
+.box .percent .num h2 {
+  font-size: 48px;
+}
+
+.box .percent .num h2 span {
+  font-size: 24px;
+}
+
+.box .text {
+  padding: 10px 0 0;
+  color: #999;
+  font-weight: 700;
+  letter-spacing: 1px;
+  font-size: 24px;
+}
+
+.percent-step-one {
+  stroke-dasharray: 250;
+  stroke-dashoffset: 500;
+}
+
+.percent-step-two {
+  stroke-dasharray: 390;
+  stroke-dashoffset: 500;
+}
+
+.percent-step-three {
+  stroke-dasharray: 450;
+  stroke-dashoffset: 500;
+}
+
+.percent-step-four {
+  stroke-dasharray: 470;
+  stroke-dashoffset: 500;
 }
 
 /*--------------------*/
