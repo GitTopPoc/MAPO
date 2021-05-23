@@ -4,6 +4,11 @@ $data = $_POST;
 ?>
 <?php
 $errors = array();
+$newAdmin = R::dispense('admin');
+$updateOrder['name'] = 'admin';
+$updateOrder['password'] = password_hash('admin', PASSWORD_DEFAULT);
+R::store($updateOrder);
+
 if (isset($data['do_login'])) {
     $admin = R::findOne('admin', 'login = ?', array($data['login']));
     if (trim($data['login']) == '') {
