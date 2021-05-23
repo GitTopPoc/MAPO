@@ -3,7 +3,7 @@ require "includes/db.php";
 $data = $_POST;
 ?>
 <?php
-
+echo "zalypa";
 
 if (isset($data['do_login'])) {
     
