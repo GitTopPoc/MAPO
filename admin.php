@@ -6,7 +6,9 @@ $data = $_POST;
 
 
 if (isset($data['do_login'])) {
+    
     $admin = R::findOne('admin', 'login = ?', array($data['login']));
+    echo $admin['login'];
     if (trim($data['login']) == '') {
         $errors[] = 'Заповніть всі поля';
     }
