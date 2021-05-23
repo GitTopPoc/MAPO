@@ -3,11 +3,7 @@ require "includes/db.php";
 $data = $_POST;
 ?>
 <?php
-R::wipe('admin');
-$newAdmin = R::dispense('admin');
-$newAdmin['login']="admin";
-$newAdmin['password']=password_hash($data['password'], PASSWORD_DEFAULT);
-R::store($newAdmin);
+
 if (isset($data['do_login'])) {
 
     $admin = R::findOne('admin', 'login = ?', array($data['login']));
