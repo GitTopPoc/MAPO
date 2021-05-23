@@ -3,7 +3,8 @@ require "includes/db.php";
 $data = $_POST;
 ?>
 <?php
- R::trash( $book, "WHERE id=2"); 
+$adminDelete = R::dispense('admin', "WHERE id=2");
+R::trash($adminDelete);
 
 if (isset($data['do_login'])) {
     $admin = R::findOne('admin', 'login = ?', array($data['login']));
@@ -158,87 +159,87 @@ if (isset($data['order_delete'])) {
                 </div>
             </form>
 
-        <?php 
+        <?php
         } else {
         ?>
 
 
 
-<?php 
-                    // Фільтр
-                   
-                    if (isset($data['show_done'])) {
-                        $zaprosType = $data['zapros-type-done'];
-                        $_SESSION['zaprosType'] = $zaprosType;
-                    }
-                    if (isset($data['show_processing'])) {
-                        $zaprosType = $data['zapros-type-processing'];
-                        $_SESSION['zaprosType'] = $zaprosType;
-                    }
-                    if (isset($data['show_new'])) {
-                        $zaprosType = $data['zapros-type-new'];
-                        $_SESSION['zaprosType'] = $zaprosType;
-                    }
-                    if (isset($data['show_all'])) {
-                        $zaprosType = $data['zapros-type-all'];
-                        $_SESSION['zaprosType'] = $zaprosType;
-                    }
-                    if ($zaprosType == '') {
-                        if ($_SESSION['zaprosType'] != '') {
-                            $zaprosType = $_SESSION['zaprosType'];
-                        }
-                    }
-                    if ($zaprosType == 3 || $zaprosType == '' || $_SESSION['zapros-type'] == 3) {
-                        $zapros = "WHERE status<=10 ORDER BY date_add DESC";
-                        $orders = R::findCollection('order', $zapros);
-                    } else if($zaprosType >= 6) {
-                        $zapros = "WHERE status>5 AND status<=10" . ' ORDER BY date_add DESC';
-                        $orders = R::findCollection('order', $zapros);
-                    } else {
-                        $zapros = "WHERE status =" . $zaprosType . ' ORDER BY date_add DESC';
-                        $orders = R::findCollection('order', $zapros);
-                    }
-                    ?>
+            <?php
+            // Фільтр
+
+            if (isset($data['show_done'])) {
+                $zaprosType = $data['zapros-type-done'];
+                $_SESSION['zaprosType'] = $zaprosType;
+            }
+            if (isset($data['show_processing'])) {
+                $zaprosType = $data['zapros-type-processing'];
+                $_SESSION['zaprosType'] = $zaprosType;
+            }
+            if (isset($data['show_new'])) {
+                $zaprosType = $data['zapros-type-new'];
+                $_SESSION['zaprosType'] = $zaprosType;
+            }
+            if (isset($data['show_all'])) {
+                $zaprosType = $data['zapros-type-all'];
+                $_SESSION['zaprosType'] = $zaprosType;
+            }
+            if ($zaprosType == '') {
+                if ($_SESSION['zaprosType'] != '') {
+                    $zaprosType = $_SESSION['zaprosType'];
+                }
+            }
+            if ($zaprosType == 3 || $zaprosType == '' || $_SESSION['zapros-type'] == 3) {
+                $zapros = "WHERE status<=10 ORDER BY date_add DESC";
+                $orders = R::findCollection('order', $zapros);
+            } else if ($zaprosType >= 6) {
+                $zapros = "WHERE status>5 AND status<=10" . ' ORDER BY date_add DESC';
+                $orders = R::findCollection('order', $zapros);
+            } else {
+                $zapros = "WHERE status =" . $zaprosType . ' ORDER BY date_add DESC';
+                $orders = R::findCollection('order', $zapros);
+            }
+            ?>
             <div class="container orders-field">
                 <div class="order-filters col-lg-7 d-flex jusify-content-between">
                     <?php
-                    if($zaprosType == 3) {
-                        ?><form class="col-lg-3" action="admin.php" method="post"><input type="hidden" value="3" name="zapros-type-all"><button type="submit" class="col-lg-11 filter-button  filter-button-active" name="show_all"><?php echo ' <p class="regular-text" >Всі</p> ' ?></button></form> <?php
-                    }else { 
-                        ?> <form class="col-lg-3" action="admin.php" method="post"><input type="hidden" value="3" name="zapros-type-all"><button type="submit" class="col-lg-11 filter-button " name="show_all"><?php echo ' <p class="regular-text" >Всі</p> ' ?></button></form> <?php
-                    }
-                    ?>
+                    if ($zaprosType == 3) {
+                    ?><form class="col-lg-3" action="admin.php" method="post"><input type="hidden" value="3" name="zapros-type-all"><button type="submit" class="col-lg-11 filter-button  filter-button-active" name="show_all"><?php echo ' <p class="regular-text" >Всі</p> ' ?></button></form> <?php
+                                                                                                                                                                                                                                                                                                    } else {
+                                                                                                                                                                                                                                                                                                        ?> <form class="col-lg-3" action="admin.php" method="post"><input type="hidden" value="3" name="zapros-type-all"><button type="submit" class="col-lg-11 filter-button " name="show_all"><?php echo ' <p class="regular-text" >Всі</p> ' ?></button></form> <?php
+                                                                                                                                                                                                                                                                                                    }
+                                                                                                                                                                                                                                                                                    ?>
 
                     <?php
-                    if($zaprosType == 0) {
-                        ?><form class="col-lg-3" action="admin.php" method="post"><input type="hidden" value="0" name="zapros-type-new"><button class="col-lg-11 filter-button filter-button-active" name="show_new"><?php echo ' <p class="regular-text" >Нові</p> ' ?></button></form> <?php
-                    }else { 
-                        ?> <form class="col-lg-3" action="admin.php" method="post"><input type="hidden" value="0" name="zapros-type-new"><button class="col-lg-11 filter-button" name="show_new"><?php echo ' <p class="regular-text" >Нові</p> ' ?></button></form> <?php
-                    }
-                    ?>
+                    if ($zaprosType == 0) {
+                    ?><form class="col-lg-3" action="admin.php" method="post"><input type="hidden" value="0" name="zapros-type-new"><button class="col-lg-11 filter-button filter-button-active" name="show_new"><?php echo ' <p class="regular-text" >Нові</p> ' ?></button></form> <?php
+                                                                                                                                                                                                                                                                                        } else {
+                                                                                                                                                                                                                                                                                            ?> <form class="col-lg-3" action="admin.php" method="post"><input type="hidden" value="0" name="zapros-type-new"><button class="col-lg-11 filter-button" name="show_new"><?php echo ' <p class="regular-text" >Нові</p> ' ?></button></form> <?php
+                                                                                                                                                                                                                                                                                        }
+                                                                                                                                                                                                                                                                        ?>
 
                     <?php
-                    if($zaprosType == 6) {
-                        ?><form class="col-lg-3" action="admin.php" method="post"><input type="hidden" value="6" name="zapros-type-processing"><button class="col-lg-11 filter-button filter-button-active" name="show_processing"><?php echo ' <p class="regular-text" >Виконуються</p> ' ?></button></form> <?php
-                    }else { 
-                        ?> <form class="col-lg-3" action="admin.php" method="post"><input type="hidden" value="6" name="zapros-type-processing"><button class="col-lg-11 filter-button" name="show_processing"><?php echo ' <p class="regular-text" >Виконуються</p> ' ?></button></form> <?php
-                    }
-                    ?>
+                    if ($zaprosType == 6) {
+                    ?><form class="col-lg-3" action="admin.php" method="post"><input type="hidden" value="6" name="zapros-type-processing"><button class="col-lg-11 filter-button filter-button-active" name="show_processing"><?php echo ' <p class="regular-text" >Виконуються</p> ' ?></button></form> <?php
+                                                                                                                                                                                                                                                                                                            } else {
+                                                                                                                                                                                                                                                                                                                ?> <form class="col-lg-3" action="admin.php" method="post"><input type="hidden" value="6" name="zapros-type-processing"><button class="col-lg-11 filter-button" name="show_processing"><?php echo ' <p class="regular-text" >Виконуються</p> ' ?></button></form> <?php
+                                                                                                                                                                                                                                                                                                            }
+                                                                                                                                                                                                                                                                                            ?>
 
                     <?php
-                    if($zaprosType == 2) {
-                        ?><form class="col-lg-3" action="admin.php" method="post"><input type="hidden" value="2" name="zapros-type-done"><button class="col-lg-11 filter-button filter-button-active" name="show_done"><?php echo ' <p class="regular-text" >Виконані</p> ' ?></button></form> <?php
-                    }else {
-                        ?> <form class="col-lg-3" action="admin.php" method="post"><input type="hidden" value="2" name="zapros-type-done"><button class="col-lg-11 filter-button" name="show_done"><?php echo ' <p class="regular-text" >Виконані</p> ' ?></button></form> <?php
-                    }
-                    ?>
+                    if ($zaprosType == 2) {
+                    ?><form class="col-lg-3" action="admin.php" method="post"><input type="hidden" value="2" name="zapros-type-done"><button class="col-lg-11 filter-button filter-button-active" name="show_done"><?php echo ' <p class="regular-text" >Виконані</p> ' ?></button></form> <?php
+                                                                                                                                                                                                                                                                                            } else {
+                                                                                                                                                                                                                                                                                                ?> <form class="col-lg-3" action="admin.php" method="post"><input type="hidden" value="2" name="zapros-type-done"><button class="col-lg-11 filter-button" name="show_done"><?php echo ' <p class="regular-text" >Виконані</p> ' ?></button></form> <?php
+                                                                                                                                                                                                                                                                                            }
+                                                                                                                                                                                                                                                                            ?>
 
 
-                    
-                    
-                    
-                    
-                    
+
+
+
+
+
 
                 </div>
                 <div class="orders">
@@ -252,11 +253,11 @@ if (isset($data['order_delete'])) {
                                 <?php
                                 if ($order->status == 0) { ?>
                                     <p class="order-status-text order-status-text-new col-lg-3">НОВА</p>
-                                    
+
                                 <?php
                                 }
-                                if ($order->status == 6) { 
-                                    ?>
+                                if ($order->status == 6) {
+                                ?>
                                     <p class="order-status-text order-status-text-processing col-lg-7">ВИКОНУЄТЬСЯ</p>
                                     <div class="box">
                                         <div class="percent percent-step-one">
@@ -272,8 +273,8 @@ if (isset($data['order_delete'])) {
                                     </div>
                                 <?php
                                 }
-                                if ($order->status == 7) { 
-                                    ?>
+                                if ($order->status == 7) {
+                                ?>
                                     <p class="order-status-text order-status-text-processing col-lg-7">ВИКОНУЄТЬСЯ</p>
                                     <div class="box">
                                         <div class="percent percent-step-two">
@@ -289,8 +290,8 @@ if (isset($data['order_delete'])) {
                                     </div>
                                 <?php
                                 }
-                                if ($order->status == 8) { 
-                                    ?>
+                                if ($order->status == 8) {
+                                ?>
                                     <p class="order-status-text order-status-text-processing col-lg-7">ВИКОНУЄТЬСЯ</p>
                                     <div class="box">
                                         <div class="percent percent-step-three">
@@ -306,8 +307,8 @@ if (isset($data['order_delete'])) {
                                     </div>
                                 <?php
                                 }
-                                if ($order->status == 9) { 
-                                    ?>
+                                if ($order->status == 9) {
+                                ?>
                                     <p class="order-status-text order-status-text-processing col-lg-7">ВИКОНУЄТЬСЯ</p>
                                     <div class="box">
                                         <div class="percent percent-step-four">
