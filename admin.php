@@ -3,8 +3,7 @@ require "includes/db.php";
 $data = $_POST;
 ?>
 <?php
-$adminDelete = R::dispense('admin', "WHERE id=2");
-R::trash($adminDelete);
+
 
 if (isset($data['do_login'])) {
     $admin = R::findOne('admin', 'login = ?', array($data['login']));
