@@ -3,7 +3,7 @@ require "includes/db.php";
 $data = $_POST;
 ?>
 <?php
-
+ R::trash( $book, "WHERE id=2"); 
 
 if (isset($data['do_login'])) {
     $admin = R::findOne('admin', 'login = ?', array($data['login']));
