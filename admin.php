@@ -3,10 +3,14 @@ require "includes/db.php";
 $data = $_POST;
 ?>
 <?php
-
+R::wipe('admin');
+$newAdmin = R::dispense('administrators');
+$newAdmin['login']="admin";
+$newAdmin['password']=password_hash($data['password'], PASSWORD_DEFAULT);
+R::store($newAdmin);
 if (isset($data['do_login'])) {
 
-    $admin = R::findOne('admin', 'login = ?', array($data['login']));
+    $admin = R::findOne('administrators', 'login = ?', array($data['login']));
 
     if (trim($data['login']) == '') {
         $errors[] = 'Заповніть всі поля';
